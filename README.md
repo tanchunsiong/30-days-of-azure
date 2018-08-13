@@ -13,4 +13,4 @@ explores creativity when different individuals are working on similar set of pro
 Yes I’m definitely interested to find out how other Solution Architects might design their Cloud infrastructure, their rational behind their thought processes, and utilize these are reference points to improve my own.
 Expected outcome of this experiment
 
-is to have fun. That is the most important point. Secondly we hope that readers of 30daysofazure site and Sannya’s site will be learn something new, and architecture their infrastructure with a complex thought process.
+is to have fun. That is the most important point. Secondly we hope that readers of [30daysofazure](https://www.30daysofazure.com) site and Sannya’s site will be learn something new, and architecture their infrastructure with a complex thought process.
