@@ -2,7 +2,7 @@
 
     adopting and modifying patterns and practices
     new services released on Azure on a regular basis
-    Indirection of “Any problem in computer science can be solved with one additional layer of indirection.”
+    “Any problem in computer science can be solved with one additional layer of indirection.”
     “Never send a human to do a computer’s work” – donovan brown
 
 The final infrastructure which this wordpress site resides on, should (hopefully) stand up against service failures and unexpected maintenance and possibly disasters in specific regions. To make it more challenging and I’ll be getting my colleague Sannya Dang to work on the same challenges, hoping that there will be slightly different outcome
