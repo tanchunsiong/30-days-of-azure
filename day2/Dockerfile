@@ -27,3 +27,5 @@ CMD service php7.2-fpm start
 CMD service nginx start
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+CMD tail -f /var/log/nginx/error.log
