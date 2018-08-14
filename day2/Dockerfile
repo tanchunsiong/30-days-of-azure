@@ -22,7 +22,7 @@ WORKDIR /var/www/html
 COPY / /var/www/html
 RUN ls -la /*
 
-EXPOSE 80
+EXPOSE 80 443
 CMD service php7.2-fpm start
 CMD service nginx start
 
