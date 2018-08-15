@@ -1,5 +1,5 @@
 #base on https://github.com/fideloper/docker-nginx-php
-FROM 30doacontainerregistry932.azurecr.io/ubuntu:php-serviceonboot
+FROM 30doacontainerregistry932.azurecr.io/ubuntu:serviceonboot-mssqlodbc
 
 #commands already executed in the image above
 #apt-get update
@@ -12,8 +12,6 @@ FROM 30doacontainerregistry932.azurecr.io/ubuntu:php-serviceonboot
 #update-rc.d nginx defaults
 #update-rc.d php7.2-fpm defaults
 
-
-
 CMD ["/sbin/my_init"]
 
 
@@ -23,7 +21,6 @@ COPY / /var/www/html
 RUN ls -la /*
 
 EXPOSE 80 443
-
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
