@@ -8,15 +8,18 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   tls:
-    - hosts:
+    - secretName: tls-secret
+      hosts:
       - www.30daysofazure.com
-      secretName: tls-secret
-    - hosts:
+
+    - secretName: tls-secret-tcs
+      hosts:
       - www.tanchunsiong.com
-      secretName: tls-secret-tcs
-    -hosts:
+      
+    - secretName: tls-secret-spiffysg
+      hosts:
       - www.weshipcode.com	
-      secretName: tls-secret-spiffysg
+      
   rules:
   - host: www.30daysofazure.com
     http:
