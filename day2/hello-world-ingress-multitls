@@ -1,0 +1,41 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-world-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+    - hosts:
+      - www.30daysofazure.com
+      secretName: tls-secret
+    - hosts:
+      - www.tanchunsiong.com
+      secretName: tls-secret-tcs
+    -hosts:
+      - www.weshipcode.com	
+      secretName: tls-secret-spiffysg
+  rules:
+  - host: www.30daysofazure.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: projectnami
+          servicePort: 80
+  - host: www.tanchunsiong.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: tanchunsiong-wordpress
+          servicePort: 80
+  - host: www.weshipcode.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: wordpress
+          servicePort: 80		  
